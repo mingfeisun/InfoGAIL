@@ -17,8 +17,8 @@ feat_dim = [7, 13, 1024]
 aux_dim = 10
 encode_dim = 2
 action_dim = 3
-pre_actions_path = "/home/yunzhu/Desktop/human_0/pre_actions.npz"
-param_path = "/home/yunzhu/Desktop/wgail_info_params_0/params/generator_model_37.h5"
+pre_actions_path = "/home/mingfei/Documents/InfoGAIL/data/human_0/pre_actions.npz"
+param_path = "/home/mingfei/Documents/InfoGAIL/data/wgail_info_params_0/params/generator_model_37.h5"
 
 MAX_STEP_LIMIT = 300
 MIN_STEP_LIMIT = 100

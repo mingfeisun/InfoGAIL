@@ -14,9 +14,9 @@ from models import TRPOAgent
 
 def playGame(finetune=0):
 
-    demo_dir = "/home/yunzhu/Desktop/human_0/"
-    param_dir = "/home/yunzhu/Desktop/wgail_info_params_0/"
-    pre_actions_path = "/home/yunzhu/Desktop/human_0/pre_actions.npz"
+    demo_dir = "/home/mingfei/Documents/InfoGAIL/data/human_0/"
+    param_dir = "/home/mingfei/Documents/InfoGAIL/data/wgail_info_params_0/"
+    pre_actions_path = "/home/mingfei/Documents/InfoGAIL/data/human_0/pre_actions.npz"
     feat_dim = [7, 13, 1024]
     img_dim = [50, 50, 3]
     aux_dim = 10

@@ -74,7 +74,7 @@ def numel(x):
 
 def flatgrad(loss, var_list):
     grads = tf.gradients(loss, var_list)
-    return tf.concat(0, [tf.reshape(grad, [numel(v)])
+    return tf.concat(axis=0, values=[tf.reshape(grad, [numel(v)])
                          for (v, grad) in zip(var_list, grads)])
 
 def get_feat(imgs, feat_extractor):
@@ -330,7 +330,7 @@ class NNBaseline(object):
 class GetFlat(object):
     def __init__(self, session, var_list):
         self.session = session
-        self.op = tf.concat(0, [tf.reshape(v, [numel(v)]) for v in var_list])
+        self.op = tf.concat(axis=0, values=[tf.reshape(v, [numel(v)]) for v in var_list])
 
     def __call__(self):
         return self.op.eval(session=self.session)

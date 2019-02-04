@@ -419,7 +419,7 @@ class TRPOAgent(object):
             # Computing returns and estimating advantage function.
             path_idx = 0
             for path in paths:
-                file_path = "/home/yunzhu/Desktop/log/iter_%d_path_%d.txt" % (i, path_idx)
+                file_path = "/home/mingfei/Documents/InfoGAIL/log/iter_%d_path_%d.txt" % (i, path_idx)
                 f = open(file_path, "w")
                 path["baselines"] = self.baseline.predict(path)
                 output_d = self.discriminate.predict(
@@ -505,7 +505,7 @@ class TRPOAgent(object):
             if entropy != entropy:
                 exit(-1)
 
-            param_dir = "/home/yunzhu/Desktop/params/"
+            param_dir = "/home/mingfei/Documents/InfoGAIL/data/params/"
             print("Now we save model")
             self.generator.save_weights(
                 param_dir + "generator_model_%d.h5" % i, overwrite=True)
